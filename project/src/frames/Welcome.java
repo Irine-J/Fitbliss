@@ -86,7 +86,9 @@ public class Welcome extends JFrame {
 
 		MatComboBox<String> signUpBirthYear = addMiniComboBox(signUpPanel, signUpConstraints, 0, 330, years);
 		MatComboBox<String> signUpGender = addMiniComboBox(signUpPanel, signUpConstraints, 120, 0, genders);
-
+                String[] weightGoals = {"Weight Gain", "Weight Lose", "Weight Maintain"};
+                MatComboBox<String> signUpWeightGoal = addMiniComboBox(signUpPanel, signUpConstraints, 0, 330, weightGoals);
+                signUpPanel.add(signUpWeightGoal, signUpConstraints);
 		MatButton signUp = addButton(signUpPanel, signUpConstraints, 20, "Sign up", Theme.LIGHT_BLUE.color, Color.WHITE);
 
 		JLabel signUpError = addLabel(signUpPanel, signInConstraints, 0, 20, " ", 17f, Theme.RED.color);
